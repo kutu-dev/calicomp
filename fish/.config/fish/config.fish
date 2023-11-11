@@ -9,4 +9,5 @@ if status is-interactive
     # Abbreviation
     abbr --add kpi "sudo xbps-install -S"
     abbr --add kpr "sudo xbps-remove -R"
+    abbr --add c. "code ."
 end
