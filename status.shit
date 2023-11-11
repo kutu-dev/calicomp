@@ -1,0 +1,7 @@
+ADD - flatpak overrides [?]
+ADD - pyenv (fish config.fish)
+ADD - poetry (fish completions)
+ADD - kvantum (hypr env)
+SET - tofi (hypr binds && hypr script-quick-actions-menu)
+ADD - email bullshit (dunst icons email.png)
+FIX - udiskie (dunst icons udiskie.png)

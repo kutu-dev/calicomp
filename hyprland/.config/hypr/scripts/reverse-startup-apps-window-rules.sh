@@ -4,8 +4,8 @@ steam_windows_opened=0
 
 handle() {
     case $1 in
-        openwindow\>\>*,*,firefox,*)
-            hyprctl keyword windowrulev2 "workspace unset, class:firefox"
+        openwindow\>\>*,*,discord-screenaudio,*)
+            hyprctl keyword windowrulev2 "workspace unset, class:discord-screenaudio"
         ;;
 
         openwindow\>\>*,*,Spotify,*)
@@ -14,7 +14,7 @@ handle() {
 
         openwindow\>\>*,*,steam,*)
             # Avoid unsetting the window rule when the Steam update popup appears
-            if [[ $steam_windows_opened -eq 2 ]]; then
+            if [ $steam_windows_opened -eq 2 ]; then
                 hyprctl keyword windowrulev2 "workspace unset, class:steam"
             else
                 steam_windows_opened=$((steam_windows_opened+1))

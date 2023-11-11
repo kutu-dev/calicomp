@@ -2,12 +2,12 @@
 
 figlet -f small "CALICOMP  Updater"
 echo -n "Proceed with the system update? (Y/n) "
-read response
-response=$(echo $response | tr "[:upper:]" "[:lower:]")
+read answer
+answer=$(echo $answer | tr "[:upper:]" "[:lower:]")
 
-if [[ $response == "" ]] || [[ $response == "y" ]] || [[ $response == "yes" ]]; then
-    paru -Syu
+if [ "$answer" = "" ] || [ "$answer" = "y" ] || [ "$answer" = "yes" ]; then
+    sudo xbps-install -Su
     flatpak update
-    echo -n "System update finished, press Enter to exit... "
-    read
 fi
+
+pkill -SIGRTMIN+2 -x waybar

@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-if [[ $(hyprctl activewindow -j | jaq -r ".class") == "Steam" ]]; then
-    xdotool windowunmap $(xdotool getactivewindow)
+if [ "$(hyprctl activewindow -j | jq -r ".class")" = "Steam" ]; then
+    xdotool windowunmap "$(xdotool getactivewindow)"
 else
-    hyprctl dispatch killactive ""
+    hyprctl dispatch killactive
 fi

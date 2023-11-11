@@ -1,0 +1,2 @@
+timeout 300 'waylock -init-color 0x16161E -input-color 0x1A1B26 -fail-color 0x8c4351'
+timeout 600 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'

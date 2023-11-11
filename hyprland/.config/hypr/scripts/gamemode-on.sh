@@ -10,6 +10,8 @@ hyprctl --batch "\
     keyword decoration:rounding 0;\
     keyword unbind ALT,SPACE;\
     keyword unbind CONTROL,SPACE"
-killall waybar
-killall swayidle
-dunstify -i ~/.config/hypr/pictures/$(ls ~/.config/hypr/pictures | sort -R | head -1) CALICOMP "Gamemode activated"
+
+pkill -x "waybar"
+pkill -x "swayidle"
+
+~/.config/hypr/scripts/system-notification.sh "Gamemode enabled"

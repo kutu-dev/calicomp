@@ -1,11 +1,27 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "custom/wallpaper", "custom/mpris"],
-    "modules-right": ["custom/caffeine", "custom/packages-icon", "custom/pacman-text", "custom/paru-text", "custom/flatpak-text", "pulseaudio#output-icon", "pulseaudio#output-text", "pulseaudio#input-icon","pulseaudio#input-text","network#icon", "network#text", "clock", "custom/powermenu"],
+    "position": "top",
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/wallpaper",
+        "custom/mpris"
+    ],
+    "modules-right": [
+        "custom/caffeine",
+        "custom/packages-icon",
+        "custom/xbps-updates",
+        "custom/flatpak-text",
+        "pulseaudio#output-icon",
+        "pulseaudio#output-text",
+        "pulseaudio#input-icon",
+        "pulseaudio#input-text",
+        "network#icon",
+        "network#text",
+        "clock",
+        "custom/powermenu"],
     "margin-top": 5,
     "margin-left": 5,
     "margin-right": 5,
-    
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -49,41 +65,31 @@
         "interval": "once",
         "exec": "~/.config/waybar/scripts/caffeine.sh 2> /dev/null",
         "on-click": "sh ~/.config/hypr/scripts/caffeine-toggle.sh",
-        "signal": 9
+        "signal": 1
     },
 
-    
     "custom/packages-icon": {
         "format": "󰏗",
         "tooltip": false,
-        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh; pkill -SIGRTMIN+8 waybar"
+        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh"
     },
 
-    "custom/pacman-text": {
-        "format": "{}p",
+    "custom/xbps-updates": {
+        "format": "{}x",
         "tooltip": false,
         "interval": 3600,
-        "exec": "checkupdates | wc -l",
-        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh; pkill -SIGRTMIN+8 waybar",
-        "signal": 8
-    },
-
-    "custom/paru-text": {
-        "format": "{}a",
-        "tooltip": false,
-        "interval": 3600,
-        "exec": "paru -Qua | wc -l",
-        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh; pkill -SIGRTMIN+8 waybar",
-        "signal": 8
+        "exec": "xbps-install --memory-sync --dry-run --update | grep -Fe update -e install | wc -l 2> /dev/null",
+        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh",
+        "signal": 2
     },
 
     "custom/flatpak-text": {
         "format": "{}f",
         "tooltip": false,
         "interval": 3600,
-        "exec": "flatpak remote-ls --updates | wc -l",
-        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh; pkill -SIGRTMIN+8 waybar",
-        "signal": 8
+        "exec": "flatpak remote-ls --updates | wc -l 2> /dev/null",
+        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh",
+        "signal": 2
     },
 
     "clock": {
@@ -123,7 +129,7 @@
         "format-ethernet": "󰈀",
         "format-wifi": "󰖩",
         "format-disconnected": "⚠",
-        "on-click": "killall nm-connection-editor; nm-connection-editor",
+        "on-click": "pkill -x nm-connection-editor; nm-connection-editor",
         "tooltip": false
     },
 
@@ -132,7 +138,7 @@
         "format-ethernet": "Wired",
         "format-wifi": "{essid}",
         "format-disconnected": "Disconnected",
-        "on-click": "killall nm-connection-editor; nm-connection-editor",
+        "on-click": "pkill -x nm-connection-editor; nm-connection-editor",
         "tooltip": false
     },
 
@@ -141,6 +147,4 @@
         "on-click": "eww open --toggle powermenu",
         "tooltip": false
     }
-
-
 }

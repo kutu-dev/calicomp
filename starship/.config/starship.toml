@@ -4,7 +4,7 @@
 show_always = true
 
 [directory]
-read_only = " "
+read_only = " "
 truncation_symbol = "…/"
 
 [character]

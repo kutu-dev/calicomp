@@ -1,6 +1,12 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # Commands run at startup
     neofetch
+
+    # Source scripts
     starship init fish | source
     #pyenv init - | source
+
+    # Abbreviation
+    abbr --add kpi "sudo xbps-install -S"
+    abbr --add kpr "sudo xbps-remove -R"
 end

@@ -10,4 +10,4 @@ if ! pgrep -x "swayidle" > /dev/null; then
     swayidle &
 fi
 
-dunstify -i ~/.config/hypr/pictures/$(ls ~/.config/hypr/pictures | sort -R | head -1) CALICOMP "Gamemode deactivated"
+~/.config/hypr/scripts/system-notification.sh "Gamemode disabled"

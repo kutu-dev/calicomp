@@ -1,3 +1,3 @@
-function tree -w eza --description "Change the default 'ls' with a configured 'exa' in tree mode"
-    command eza --icons --git --tree $argv
+function tree --wraps='eza --icons --git --tree' --description 'alias tree=eza --icons --git --tree'
+  command eza --icons --git --tree  $argv       
 end
