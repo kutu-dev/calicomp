@@ -5,3 +5,7 @@ ADD - kvantum (hypr env)
 SET - tofi (hypr binds && hypr script-quick-actions-menu)
 ADD - email bullshit (dunst icons email.png)
 FIX - udiskie (dunst icons udiskie.png)
+
+Linters & formaters:
+- CSS
+- Python

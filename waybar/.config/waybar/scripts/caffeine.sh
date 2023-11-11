@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-if pgrep -x "swayidle" > /dev/null; then
-    echo 󰾪
+if pgrep -x "swayidle" >/dev/null; then
+	echo 󰾪
 else
-    echo 󰅶
+	echo 󰅶
 fi

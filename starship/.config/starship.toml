@@ -1,22 +1,5 @@
 # Per module configuration
 
-[username]
-show_always = true
-
-[directory]
-read_only = " "
-truncation_symbol = "…/"
-
-[character]
-success_symbol = '[ ❯](bold green)'
-error_symbol = '[ ❯](bold red)'
-vimcmd_symbol = '[ ❮](bold green)'
-vimcmd_replace_one_symbol = '[ ❮](bold purple)'
-vimcmd_replace_symbol = '[ ❮](bold blue)'
-vimcmd_visual_symbol = '[ ❮](bold yellow)'
-
-# Nerd font icons
-
 [aws]
 symbol = "  "
 
@@ -26,11 +9,23 @@ symbol = " "
 [c]
 symbol = " "
 
+[character]
+error_symbol = '[ ❯](bold red)'
+success_symbol = '[ ❯](bold green)'
+vimcmd_replace_one_symbol = '[ ❮](bold purple)'
+vimcmd_replace_symbol = '[ ❮](bold blue)'
+vimcmd_symbol = '[ ❮](bold green)'
+vimcmd_visual_symbol = '[ ❮](bold yellow)'
+
 [conda]
 symbol = " "
 
 [dart]
 symbol = " "
+
+[directory]
+read_only = " "
+truncation_symbol = "…/"
 
 [docker_context]
 symbol = " "
@@ -97,3 +92,6 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
+
+[username]
+show_always = true

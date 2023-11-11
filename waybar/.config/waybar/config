@@ -52,7 +52,7 @@
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-click-right": "hyprctl dispatch workspace $(hyprctl -j clients | jaq '.[] | select(.initialTitle==\"Spotify\") | .workspace.id' | head -n 1)",
-        "smooth-scrolling-threshold": 1, 
+        "smooth-scrolling-threshold": 1,
         "on-scroll-up" : "playerctl next",
         "on-scroll-down" : "playerctl previous",
         "exec": "~/.config/waybar/scripts/mediaplayer.py 2> /dev/null",

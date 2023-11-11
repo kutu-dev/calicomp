@@ -65,7 +65,7 @@
     browser = /usr/bin/xdg-open
 
     # Miscellaneous
-    
+
     always_run_script = true
     ignore_dbusclose = false
 
