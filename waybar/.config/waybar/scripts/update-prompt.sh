@@ -3,7 +3,7 @@
 figlet -f small "CALICOMP  Updater"
 printf "%s" "Proceed with the system update? (Y/n) "
 read -r answer
-answer=$(echo "$answer" | tr "[:upper:]" "[:lower:]")
+answer=$(printf "%s" "$answer" | tr "[:upper:]" "[:lower:]")
 
 if [ "$answer" = "" ] || [ "$answer" = "y" ] || [ "$answer" = "yes" ]; then
 	sudo xbps-install -Su
