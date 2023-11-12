@@ -1,7 +1,9 @@
+MOVE - Spicetify [~/.spicetify]
+
 ADD - pyenv (fish config.fish)
 ADD - email bullshit (dunst icons email.png)
 
-FIX - udiskie (dunst icons udiskie.png)
+FIX(ADD) - swww
 
 Linters & formaters:
 - CSS
