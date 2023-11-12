@@ -1,6 +1,4 @@
 ADD - pyenv (fish config.fish)
-ADD - poetry (fish completions)
-ADD - kvantum (hypr env)
 ADD - email bullshit (dunst icons email.png)
 
 FIX - udiskie (dunst icons udiskie.png)
