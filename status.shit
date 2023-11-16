@@ -1,9 +1,5 @@
-MOVE - Spicetify [~/.spicetify]
-
-ADD - pyenv (fish config.fish)
 ADD - email bullshit (dunst icons email.png)
-
-FIX(ADD) - swww
+FIX(CHANGE) - kitty term -> WezTerm
 
 Linters & formaters:
 - CSS

@@ -144,7 +144,7 @@
 
     "custom/powermenu": {
         "format":"⏻",
-        "on-click": "eww open --toggle powermenu",
+        "on-click": "loginctl poweroff",
         "tooltip": false
     }
 }
