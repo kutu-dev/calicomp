@@ -1,0 +1,1 @@
+feh --image-bg black --auto-zoom --scale-down -g 1280x720 -S filename
