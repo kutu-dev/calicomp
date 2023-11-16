@@ -1,6 +1,9 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
+config.front_end = "WebGpu"
+config.enable_wayland = false
+
 config.color_scheme_dirs = { wezterm.home_dir .. '/.config/wezterm/colors' }
 config.color_scheme = 'tokyonight'
 
