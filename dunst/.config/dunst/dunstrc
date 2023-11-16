@@ -38,7 +38,7 @@
     font = Jetbrains Mono Nerd Font 10
     line_height = 0
     markup = full
-    format = "<b>%s</b>\n%b %p"
+    format = "<b>%s</b>\n%b %p%i"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
@@ -50,18 +50,17 @@
 
     # Icons
     enable_recursive_icon_lookup = true
-    icon_theme = Papirus-Dark
+    icon_theme = Adwaita
     icon_position = left
     min_icon_size = 0
     max_icon_size = 90
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     # History
     sticky_history = yes
     history_length = 20
 
     # Paths
-    dmenu = /usr/bin/rofi -dmenu -p dunst
+    dmenu = /usr/bin/tofi
     browser = /usr/bin/xdg-open
 
     # Miscellaneous
@@ -116,4 +115,10 @@
 [udiskie_icon]
     appname = udiskie
     new_icon = ~/.config/dunst/icons/udiskie.png
+    max_icon_size = 50
+
+# Custom Icons
+[firefox_icon]
+    appname = Firefox
+    new_icon = ~/.config/dunst/icons/firefox.png
     max_icon_size = 50
