@@ -1,97 +1,35 @@
-# Per module configuration
+# Global configuration
 
-[aws]
-symbol = "  "
-
-[buf]
-symbol = " "
-
-[c]
-symbol = " "
+format = """
+$directory$git_branch$git_status$python
+$character
+"""
 
 [character]
-error_symbol = ' [❯](bold red)'
-success_symbol = ' [❯](bold green)'
-vimcmd_replace_one_symbol = ' [❮](bold purple)'
-vimcmd_replace_symbol = ' [❮](bold blue)'
-vimcmd_symbol = ' [❮](bold green)'
-vimcmd_visual_symbol = ' [❮](bold yellow)'
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
+error_symbol = '[▶](bold red)'
+success_symbol = '[▶](bold green)'
+vimcmd_replace_one_symbol = '[](bold purple)'
+vimcmd_replace_symbol = '[](bold blue)'
+vimcmd_symbol = '[](bold cyan)'
+vimcmd_visual_symbol = '[](bold yellow)'
 
 [directory]
-read_only = " "
-truncation_symbol = "…/"
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
+format = "[$path]($style)( [$read_only]($read_only_style))"
+home_symbol = "~"
+read_only = ""
+truncation_symbol = ".../"
 
 [git_branch]
-symbol = " "
+format = "( [$branch(:$remote_branch)]($style))"
+style = "#8087A4"
 
-[golang]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = " "
-
-[meson]
-symbol = "喝 "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[package]
-symbol = " "
+[git_status]
+format = "( [$all_status]($style))"
+modified = "󱈸"
 
 [python]
-symbol = " "
-
-[rlang]
-symbol = "ﳒ "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = " "
-
-[scala]
-symbol = " "
-
-[spack]
-symbol = "🅢 "
-
-[username]
-show_always = true
+format = "( [$symbol ${version}]($style bold) [$virtualenv]($style italic))"
+python_binary = "python"
+style = "yellow"
+symbol = ""
+version_format = "$raw"

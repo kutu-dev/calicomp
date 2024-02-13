@@ -3,7 +3,9 @@
     "position": "top",
     "modules-left": [
         "hyprland/workspaces",
-        "custom/wallpaper",
+        "custom/wallpaper"
+    ],
+    "modules-center": [
         "custom/mpris"
     ],
     "modules-right": [
@@ -19,9 +21,9 @@
         "network#text",
         "clock",
         "custom/powermenu"],
-    "margin-top": 5,
-    "margin-left": 5,
-    "margin-right": 5,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -42,16 +44,15 @@
 
     "custom/wallpaper": {
         "format": "",
-        "on-click" : "swww img ~/pictures/wallpapers/$(ls ~/pictures/wallpapers | sort -R | head -1) -t grow --transition-pos 303,1054",
+        "on-click" : "swww img \"$(find ~/pictures/wallpapers/* -type f| sort -R | head -1)\" -t grow --transition-pos 313,1054",
         "tooltip": false
     },
 
     "custom/mpris": {
-        "format": "󰎈 {}",
-        "escape": true,
+        "format": "{}",
         "return-type": "json",
         "on-click": "playerctl play-pause",
-        "on-click-right": "hyprctl dispatch workspace $(hyprctl -j clients | jaq '.[] | select(.initialTitle==\"Spotify\") | .workspace.id' | head -n 1)",
+        "on-click-right": "hyprctl dispatch workspace 5",
         "smooth-scrolling-threshold": 1,
         "on-scroll-up" : "playerctl next",
         "on-scroll-down" : "playerctl previous",
@@ -71,7 +72,7 @@
     "custom/packages-icon": {
         "format": "󰏗",
         "tooltip": false,
-        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh"
+        "on-click": "wezterm start --class update-prompt --always-new-process -e ~/.config/waybar/scripts/update-prompt.sh"
     },
 
     "custom/xbps-updates": {
@@ -79,7 +80,7 @@
         "tooltip": false,
         "interval": 3600,
         "exec": "xbps-install --memory-sync --dry-run --update | grep -Fe update -e install | wc -l 2> /dev/null",
-        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh",
+        "on-click": "wezterm start --class update-prompt --always-new-process -e ~/.config/waybar/scripts/update-prompt.sh",
         "signal": 2
     },
 
@@ -88,7 +89,7 @@
         "tooltip": false,
         "interval": 3600,
         "exec": "flatpak remote-ls --updates | wc -l 2> /dev/null",
-        "on-click": "kitty --class 'update-prompt' ~/.config/waybar/scripts/update-prompt.sh",
+        "on-click": "wezterm start --class update-prompt --always-new-process -e ~/.config/waybar/scripts/update-prompt.sh",
         "signal": 2
     },
 
@@ -129,7 +130,6 @@
         "format-ethernet": "󰈀",
         "format-wifi": "󰖩",
         "format-disconnected": "⚠",
-        "on-click": "pkill -x nm-connection-editor; nm-connection-editor",
         "tooltip": false
     },
 
@@ -138,7 +138,6 @@
         "format-ethernet": "Wired",
         "format-wifi": "{essid}",
         "format-disconnected": "Disconnected",
-        "on-click": "pkill -x nm-connection-editor; nm-connection-editor",
         "tooltip": false
     },
 

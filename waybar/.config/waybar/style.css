@@ -13,20 +13,24 @@ window#waybar {
   background-color: transparent;
 }
 
-.modules-left, .modules-right {
+#workspaces, .modules-right, #custom-mpris{
   background-color: @background;
   border-radius: 5px;
 }
 
-#workspaces button {
+#workspaces button, #custom-wallpaper {
   padding: 0px 10px;
   background-color: @background;
   border: solid 2px @background;
   border-radius: 5px;
 }
 
-#workspaces button label{
+#workspaces button label, #custom-wallpaper {
   font-size: 25px;
+}
+
+#custom-wallpaper {
+ margin-left: 10px
 }
 
 #workspaces button.active {
@@ -39,20 +43,15 @@ window#waybar {
   color: @background;
 }
 
-#custom-wallpaper {
-  font-size: 25px;
-  margin: 0 15px;
-}
-
 #custom-mpris {
   font-size: 14px;
-  margin-right: 18px;
-  margin-left: 10px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 #custom-caffeine {
   font-size: 23px;
-  padding-left: 18px;
+  padding-left: 14px;
 }
 
 #custom-packages-icon {

@@ -49,6 +49,7 @@ def on_metadata(player, metadata, manager):
 
     if player.props.status != "Playing" and track_info:
         track_info = "󰏤 " + track_info
+
     write_output(track_info, player)
 
 
@@ -136,8 +137,8 @@ def main():
 
         init_player(manager, player)
 
+    print('{"text":"TEST"}')
     loop.run()
-
 
 if __name__ == "__main__":
     main()

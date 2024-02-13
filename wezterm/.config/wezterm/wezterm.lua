@@ -1,10 +1,13 @@
-local wezterm = require 'wezterm'
+local wezterm = require('wezterm')
 local config = wezterm.config_builder()
 
 config.front_end = "WebGpu"
 config.enable_wayland = false
 
-config.color_scheme_dirs = { wezterm.home_dir .. '/.config/wezterm/colors' }
+config.default_prog = { '/usr/bin/fish' }
+config.window_close_confirmation = "NeverPrompt"
+
+config.color_scheme_dirs = { wezterm.config_dir .. 'colors' }
 config.color_scheme = 'tokyonight'
 
 config.font = wezterm.font('JetbrainsMono Nerd Font', { weight = 'Medium' })
@@ -12,7 +15,7 @@ config.font_size = 14.0
 config.font_rules = {
     {
         intensity = 'Bold',
-        font = wezterm.font('JetbrainsMono Nerd Font', {weight = 'ExtraBold'}),
+        font = wezterm.font('JetbrainsMono Nerd Font', {weight = 'Bold'}),
     }
 }
 

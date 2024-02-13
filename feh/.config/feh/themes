@@ -1,1 +1,2 @@
-feh --image-bg black --auto-zoom --scale-down -g 1280x720 -S filename
+# Default theme
+feh --image-bg black --auto-zoom --scale-down -g 1280x720 -S filename -r -A "wl-copy < %F"
