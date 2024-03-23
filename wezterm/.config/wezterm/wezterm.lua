@@ -4,14 +4,13 @@ local config = wezterm.config_builder()
 config.front_end = "WebGpu"
 config.enable_wayland = false
 
-config.default_prog = { '/usr/bin/fish' }
 config.window_close_confirmation = "NeverPrompt"
 
 config.color_scheme_dirs = { wezterm.config_dir .. 'colors' }
 config.color_scheme = 'tokyonight'
 
 config.font = wezterm.font('JetbrainsMono Nerd Font', { weight = 'Medium' })
-config.font_size = 14.0
+config.font_size = 20
 config.font_rules = {
     {
         intensity = 'Bold',
