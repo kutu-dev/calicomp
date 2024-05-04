@@ -6,7 +6,6 @@ return {
     "jakewvincent/mkdnflow.nvim",
     "f3fora/cmp-spell"
   },
-
   config = function()
     local cmp = require("cmp")
 

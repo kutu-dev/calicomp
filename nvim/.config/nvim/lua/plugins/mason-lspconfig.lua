@@ -17,7 +17,7 @@ return {
   event = { "BufReadPost", "BufNewFile", "BufWritePre" },
 
   opts = {
-    ensure_installed = { "lua_ls" },
+    ensure_installed = { "lua_ls", "pylsp"},
 
     handlers = {
       default_setup,
@@ -38,6 +38,19 @@ return {
                   vim.env.VIMRUNTIME,
                 }
               }
+            }
+          }
+        })
+      end,
+      pylsp = function()
+        require("lspconfig").pylsp.setup({
+        capabilities = lsp_capabilities,
+
+          settings = {
+            pylsp = {
+              pylsp_mypy = { enabled = true },
+              ruff= { enabled = true },
+
             }
           }
         })

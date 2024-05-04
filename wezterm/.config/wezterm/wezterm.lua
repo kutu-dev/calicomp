@@ -10,7 +10,7 @@ config.color_scheme_dirs = { wezterm.config_dir .. 'colors' }
 config.color_scheme = 'tokyonight'
 
 config.font = wezterm.font('JetbrainsMono Nerd Font', { weight = 'Medium' })
-config.font_size = 20
+config.font_size = 22
 config.font_rules = {
     {
         intensity = 'Bold',

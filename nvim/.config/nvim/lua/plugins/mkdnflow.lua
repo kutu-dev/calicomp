@@ -13,7 +13,8 @@ return {
     },
 
     mappings = {
-      MkdnCreateLinkFromClipboard = {{'n', 'v'}, '<leader>mp'}
+      MkdnCreateLinkFromClipboard = {{'n', 'v'}, '<leader>mp'},
+      MkdnToggleToDo = {{'n', 'v'}, '<leader>mt'},
     },
 
     modules = {

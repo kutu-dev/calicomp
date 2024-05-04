@@ -11,7 +11,8 @@ return {
     opts = {
       ensure_installed = {
         "markdown",
-        "lua"
+        "lua",
+        "python",
       },
 
       highlight = {
